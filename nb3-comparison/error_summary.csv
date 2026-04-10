@@ -1,0 +1,17 @@
+model,type,H_ct_err,H_mp_err,K_ct_err,K_mp_err
+GPT2-Medium,attn_input,-5.62,-19.28,-4.51,5.81
+GPT2-Medium,attn_output,-5.98,-18.41,-4.85,3.99
+GPT2-Medium,ffn_input,-4.62,-16.46,-4.0,4.18
+GPT2-Medium,ffn_output,-5.49,-17.55,-4.59,3.94
+GPT2-Small,attn_input,-6.29,-21.61,-4.88,7.39
+GPT2-Small,attn_output,-8.79,-23.26,-5.68,7.55
+GPT2-Small,ffn_input,-5.07,-17.97,-4.25,5.03
+GPT2-Small,ffn_output,-5.94,-18.32,-5.01,4.16
+OPT-125M,attn_input,-6.07,-20.91,-4.9,7.26
+OPT-125M,attn_output,-6.08,-19.73,-4.96,5.33
+OPT-125M,ffn_input,-5.99,-20.12,-4.75,5.76
+OPT-125M,ffn_output,-6.73,-24.19,-5.28,10.28
+Pythia-160M,attn_input,-21.24,-41.82,-9.57,15.26
+Pythia-160M,attn_output,-5.73,-18.16,-4.63,4.09
+Pythia-160M,ffn_input,-4.96,-17.0,-4.22,4.18
+Pythia-160M,ffn_output,-4.97,-16.78,-4.24,3.93
