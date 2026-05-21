@@ -36,7 +36,7 @@ ALPHA_TRUE  = 2.0          # Weibull shape
 BETA_TRUE   = 1.0          # Weibull scale
 N_TRIALS    = 30           # number of independent samples per n
 SEED        = 0            # random seed
-N_VALUES    = [100, 200, 500, 1000, 2000, 5000]
+N_VALUES    = [100, 1_000, 10_000, 100_000]
 
 
 # ── PWM / L-moment closed-form Weibull inversion ───────────────────────
