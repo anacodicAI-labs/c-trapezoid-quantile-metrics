@@ -81,6 +81,15 @@ c-trapezoid-quantile-metrics/
 │       ├── llm_weight_acf.py                  ← Table 27: raw weight ACF
 │       └── llm_weight_acf.csv                 ← Pre-computed ACF results
 │
+├── figures/                              ← Mathematical explanation figures (Figs. 1–3, 11)
+│   ├── ON_DAY_returns.jpg                ← Fig. 4: Return period structure
+│   ├── mu_area.jpg / mu_area_*.jpg       ← Fig. 1: MAD as subarea integral
+│   ├── midpoint_quadrature.jpg           ← Fig. 2: Midpoint rule diagram
+│   ├── rectangles_quadrature.jpg         ← Fig. 2: Rectangle rule diagram
+│   ├── mad_sum_areas.jpg                 ← Fig. 3: MAD sum decomposition
+│   ├── mad_diff_area.jpg                 ← Fig. 3: MAD difference decomposition
+│   └── output.png                        ← Fig. 11: Transformer schematic
+│
 ├── figures_llm/                          ← All LLM case study figures (Figs. 12–20)
 │   ├── llm_fig1_histograms.png           ← Fig. 12: Weight histograms by layer
 │   ├── llm_fig2_H_vs_depth.png           ← Fig. 16: H spread vs. depth, all models
@@ -108,7 +117,6 @@ c-trapezoid-quantile-metrics/
 │       └── gpt2_small_comparison.csv
 │
 └── case_study_stock/
-    ├── ON_DAY_returns.jpg                ← Fig. 4: Overnight/daytime return structure
     ├── XLK_MAD_pct_err_CO.jpg           ← Fig. 5: Quadrature errors, overnight
     ├── XLK_MAD_pct_err_OC.jpg           ← Fig. 5: Quadrature errors, daytime
     ├── XLK_line_H.jpg                   ← Fig. 6: H spread time series
@@ -161,14 +169,12 @@ python wall_clock_mle_vs_closed_form.py
 
 **Reference output:**
 
-| $n$ | MLE (ms) | Closed-form (ms) | Speedup |
+| $n$ | MLE (ms) | Closed-form (ms) | % Time Saved |
 |---|---|---|---|
-| 100 | 5.29 | 0.09 | **58×** |
-| 200 | 5.41 | 0.18 | **29×** |
-| 500 | 5.82 | 0.48 | **12×** |
-| 1,000 | 6.63 | 0.96 | **7×** |
-| 2,000 | 7.88 | 1.69 | **5×** |
-| 5,000 | 12.14 | 3.89 | **3×** |
+| 100 | 1.66 | 0.038 | **97.7%** |
+| 1,000 | 2.25 | 0.361 | **83.9%** |
+| 10,000 | 10.54 | 3.62 | **65.6%** |
+| 100,000 | 99.54 | 36.85 | **63.0%** |
 
 > **Note:** Timings are machine-specific. Re-run on your hardware for reproducible results.
 > The pre-computed CSV was generated on Linux x86_64, Python 3.12.
