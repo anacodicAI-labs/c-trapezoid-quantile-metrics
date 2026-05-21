@@ -34,27 +34,12 @@ MODELS (downloaded automatically from Hugging Face on first run,
   EleutherAI/pythia-160m   (Pythia-160M,  160M)
 """
 
-import math
 import warnings
 import numpy as np
 import pandas as pd
 from scipy import stats
 
 warnings.filterwarnings("ignore")
-
-
-# ── MAD helpers (C-Trapezoid, same formulas as paper) ─────────────────
-def empirical_octiles(w: np.ndarray):
-    """Return O[1..7] from a weight array (flattened)."""
-    return np.quantile(w, [i/8 for i in range(1, 8)])
-
-
-def c_trap_H(w: np.ndarray) -> float:
-    """Compute MAD spread H via C-Trapezoid from a weight array."""
-    O1, O2, O3, _, O5, O6, O7 = empirical_octiles(w)
-    IL = (3*O1 - 2*O2 + 3*O3) / 8.0
-    IR = (3*O5 - 2*O6 + 3*O7) / 8.0
-    return float(IR - IL)
 
 
 # ── Weight extraction ──────────────────────────────────────────────────
